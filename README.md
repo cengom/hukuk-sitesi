@@ -156,6 +156,7 @@ src/
 - **Form güvenliği:** honeypot alanı, 2 saniyeden kısa gönderimlerin reddi ve IP başına 10 dakikada 5 talep sınırı vardır. Bu sınır sunucu örneği başına bellekte tutulur; yoğun spam görülürse Upstash Redis (Vercel Marketplace) ile kalıcı sınıra geçilebilir veya Cloudflare Turnstile eklenebilir.
 - **Mevzuat takibi:** makalelerdeki süre ve tutarlar (ör. yatırım yoluyla vatandaşlık tutarı, kıdem tazminatı tavanı) değiştiğinde ilgili makaleyi ve `updated` tarihini güncelleyin.
 - **Performans:** Vercel → Speed Insights’tan Core Web Vitals değerlerini izleyin. Yeni görselleri `next/image` ile ekleyin.
+- **Animasyon:** Akordeon ve mobil menü geçişleri Motion (eski adıyla Framer Motion, MIT lisanslı, ücretsiz) ile yapılır; `src/components/MotionProvider.tsx` yalnızca gereken özellikleri yükler ve “hareketi azalt” tercihine uyar. Sayfa girişleri ve kaydırma animasyonları JavaScript yükünü artırmamak için CSS ile yapılır. Ücretli Motion+ özellikleri kullanılmaz.
 - **Tasarım değişiklikleri:** renk ve tipografi değişkenleri `src/app/globals.css` içindeki `@theme` bloğundadır; Figma’daki değişkenlerle aynı adlandırmayı koruyun.
 
 ## 9. Reklam yasağı kontrol listesi

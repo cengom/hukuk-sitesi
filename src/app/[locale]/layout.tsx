@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer";
 import { MobileBar } from "@/components/MobileBar";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Reveal } from "@/components/Reveal";
+import { MotionProvider } from "@/components/MotionProvider";
 import { JsonLd } from "@/components/JsonLd";
 import { legalServiceSchema } from "@/lib/schema";
 import { site } from "@/site.config";
@@ -58,6 +59,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           {t("skip")}
         </a>
         <NextIntlClientProvider>
+          <MotionProvider>
           <Header />
           <main id="main" tabIndex={-1} className="outline-none">
             {children}
@@ -66,6 +68,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <MobileBar />
           <CookieBanner labels={{ title: c("title"), text: c("text"), accept: c("accept"), reject: c("reject"), more: c("more") }} />
           <Reveal />
+          </MotionProvider>
         </NextIntlClientProvider>
         <JsonLd data={legalServiceSchema(locale)} />
         <Analytics />

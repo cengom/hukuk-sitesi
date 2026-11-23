@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
+import { AnimatePresence, m } from "motion/react";
 import { Link } from "@/i18n/navigation";
 
 type Item = { href: "/calisma-alanlari" | "/hakkimda" | "/makaleler" | "/sss" | "/iletisim"; label: string };
@@ -63,40 +64,45 @@ export function MobileMenu({
         </span>
       </button>
 
-      <div
-        id="mobile-menu"
-        ref={panelRef}
-        role="dialog"
-        aria-modal="true"
-        aria-label={labels.primary}
-        inert={!open}
-        className={`fixed inset-x-0 bottom-0 top-[4.5rem] z-40 flex flex-col bg-ivory px-5 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-6 transition-[opacity,transform] duration-300 ease-[var(--ease-out-quint)] motion-reduce:transition-none md:top-20 md:px-10 ${
-          open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
-        }`}
-      >
-        <nav aria-label={labels.primary}>
-          <ul>
-            {items.map((it, i) => (
-              <li
-                key={it.href}
-                className="border-b border-line transition-[opacity,transform] duration-500 ease-[var(--ease-out-quint)] motion-reduce:transition-none"
-                style={{ transitionDelay: open ? `${60 + i * 40}ms` : "0ms", opacity: open ? 1 : 0, transform: open ? "none" : "translateY(8px)" }}
-              >
-                <Link href={it.href} className="flex min-h-16 items-center justify-between font-serif text-[1.75rem] font-light">
-                  {it.label}
-                  <span aria-hidden className="text-bronze">→</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="mt-auto flex items-center justify-between gap-4 pt-8">
-          {switcher}
-          <Link href="/iletisim" className="btn btn-primary btn-lg">
-            {labels.appointment}
-          </Link>
-        </div>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <m.div
+            key="menu"
+            id="mobile-menu"
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={labels.primary}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.28, ease: [0.23, 1, 0.32, 1] } }}
+            exit={{ opacity: 0, y: -6, transition: { duration: 0.18, ease: [0.4, 0, 1, 1] } }}
+            className="fixed inset-x-0 bottom-0 top-[4.5rem] z-40 flex flex-col bg-ivory px-5 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-6 md:top-20 md:px-10"
+          >
+            <nav aria-label={labels.primary}>
+              <m.ul initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.04, delayChildren: 0.06 } } }}>
+                {items.map((it) => (
+                  <m.li
+                    key={it.href}
+                    className="border-b border-line"
+                    variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.32, ease: [0.23, 1, 0.32, 1] } } }}
+                  >
+                    <Link href={it.href} className="flex min-h-16 items-center justify-between font-serif text-[1.75rem] font-light">
+                      {it.label}
+                      <span aria-hidden className="text-bronze">→</span>
+                    </Link>
+                  </m.li>
+                ))}
+              </m.ul>
+            </nav>
+            <div className="mt-auto flex items-center justify-between gap-4 pt-8">
+              {switcher}
+              <Link href="/iletisim" className="btn btn-primary btn-lg">
+                {labels.appointment}
+              </Link>
+            </div>
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
