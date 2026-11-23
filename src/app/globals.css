@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* Figma "Temeller" sayfasındaki değişkenlerle birebir (bkz. design-tokens.css) */
+@theme {
+  --color-ivory: #faf7f0;
+  --color-sand: #f3ede0;
+  --color-paper: #fffdf8;
+  --color-ink: #1c1f26;
+  --color-ink-muted: #5b5f68;
+  --color-line: #e4dccb;
+  --color-line-strong: #cdbf9f;
+  --color-gold: #c9a24b;
+  --color-honey-soft: #ebddb4;
+  --color-bronze: #8a6516;
+  --color-error: #a23b2a;
+
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-display-xl: 5.5rem;
+  --text-display-xl--line-height: 1.09;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display: 4rem;
+  --text-display--line-height: 1.125;
+  --text-display--letter-spacing: -0.015em;
+  --text-h2: 2.75rem;
+  --text-h2--line-height: 1.18;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h3: 1.75rem;
+  --text-h3--line-height: 1.29;
+  --text-h3--letter-spacing: -0.005em;
+  --text-h4: 1.3125rem;
+  --text-h4--line-height: 1.43;
+  --text-lead: 1.1875rem;
+  --text-lead--line-height: 1.63;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.57;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.33;
+  --text-eyebrow--letter-spacing: 0.12em;
+  --text-button: 0.9375rem;
+  --text-button--line-height: 1.33;
+  --text-m-display: 2.75rem;
+  --text-m-display--line-height: 1.14;
+  --text-m-h2: 2rem;
+  --text-m-h2--line-height: 1.19;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    text-wrap: balance;
+    font-variation-settings: "opsz" 72;
+  }
+  h3, h4 { font-weight: 400; font-variation-settings: "opsz" 36; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-honey-soft); color: var(--color-ink); }
+  :focus-visible {
+    outline: 2px solid var(--color-bronze);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .wrap { margin-inline: auto; width: 100%; max-width: calc(1200px + 2 * var(--gutter)); padding-inline: var(--gutter); --gutter: 1.25rem; }
+  @media (min-width: 768px) { .wrap { --gutter: 2.5rem; } }
+  @media (min-width: 1280px) { .wrap { --gutter: 7.5rem; } }
+
+  .eyebrow { font-size: var(--text-eyebrow); line-height: var(--text-eyebrow--line-height); letter-spacing: var(--text-eyebrow--letter-spacing); text-transform: uppercase; font-weight: 500; color: var(--color-bronze); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .625rem;
+    min-height: 3rem; padding: .75rem 1.5rem; border-radius: var(--radius-md);
+    font-size: var(--text-button); line-height: var(--text-button--line-height); font-weight: 500;
+    transition: transform 160ms var(--ease-out-quint), background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+    user-select: none; touch-action: manipulation;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-lg { min-height: 3.25rem; padding: 1rem 1.75rem; }
+  .btn-primary { background: var(--color-ink); color: var(--color-ivory); }
+  .btn-gold { background: var(--color-gold); color: var(--color-ink); }
+  .btn-outline { border: 1px solid var(--color-line-strong); color: var(--color-ink); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover { background: #2c303a; }
+    .btn-gold:hover { background: #d4b062; }
+    .btn-outline:hover { border-color: var(--color-ink); }
+  }
+
+  /* Altı çizili link: çizgi soldan sağa çizilir */
+  .link {
+    white-space: nowrap;
+    color: var(--color-bronze); font-weight: 500;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px; background-position: 0 100%; background-repeat: no-repeat;
+    padding-bottom: 2px;
+    transition: background-size 240ms var(--ease-out-quint);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .link:hover { background-size: 0% 1px; background-position: 100% 100%; }
+  }
+  .arrow { display: inline-block; transition: transform 200ms var(--ease-out-quint); }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover > .arrow, a:hover .arrow { transform: translateX(4px); }
+  }
+
+  .prose-legal { font-size: 1.0625rem; line-height: 1.75; color: #2b2f37; }
+  .prose-legal > * + * { margin-top: 1.25em; }
+  .prose-legal h2 { font-size: 1.875rem; line-height: 1.25; margin-top: 2.2em; color: var(--color-ink); }
+  .prose-legal h3 { font-size: 1.375rem; line-height: 1.35; margin-top: 1.8em; color: var(--color-ink); }
+  .prose-legal ul, .prose-legal ol { padding-left: 1.25em; }
+  .prose-legal ul { list-style: none; }
+  .prose-legal ul li { position: relative; }
+  .prose-legal ul li::before { content: ""; position: absolute; left: -1.1em; top: .78em; width: .45em; height: 1px; background: var(--color-gold); }
+  .prose-legal ol { list-style: decimal; }
+  .prose-legal ol li::marker { color: var(--color-bronze); font-weight: 500; }
+  .prose-legal li + li { margin-top: .5em; }
+  .prose-legal a { color: var(--color-bronze); text-decoration: underline; text-underline-offset: 3px; }
+  .prose-legal strong { font-weight: 600; color: var(--color-ink); }
+}
+
+/* Giriş ve kaydırma animasyonları — yalnızca JS varken ve hareket tercihi izin verdiğinde */
+@media (prefers-reduced-motion: no-preference) {
+  .enter { animation: enter 600ms var(--ease-out-quint) both; animation-delay: calc(var(--i, 0) * 60ms + 40ms); }
+  @keyframes enter { from { opacity: 0; transform: translateY(12px); } }
+
+  /* Yalnızca ilk ekranın altındaki öğeler gizlenir (Reveal.tsx), böylece LCP gecikmez. */
+  [data-reveal].pre { opacity: 0; transform: translateY(16px); }
+  [data-reveal].pre.is-in { opacity: 1; transform: none; transition: opacity 600ms var(--ease-out-quint), transform 600ms var(--ease-out-quint); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cookie-in { animation: cookie-in 420ms var(--ease-out-quint) 600ms both; }
+  @keyframes cookie-in { from { opacity: 0; transform: translateY(12px); } }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .article-in { animation: enter 360ms var(--ease-out-quint) both; }
+}

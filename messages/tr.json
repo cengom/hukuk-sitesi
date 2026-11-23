@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "siteName": "Av. Aleyna Elif Karaoğlu",
+    "homeTitle": "Av. Aleyna Elif Karaoğlu | İstanbul Avukat — Aile, Yabancılar ve Gayrimenkul Hukuku",
+    "homeDescription": "İstanbul Barosu’na kayıtlı Av. Aleyna Elif Karaoğlu; aile, yabancılar, gayrimenkul, ceza, iş ve tazminat hukukunda danışmanlık ve dava takibi hizmeti verir. Türkçe ve İngilizce görüşme."
+  },
+  "nav": {
+    "skip": "İçeriğe geç",
+    "areas": "Çalışma Alanları",
+    "about": "Hakkımda",
+    "articles": "Makaleler",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "appointment": "Randevu Talep Et",
+    "menu": "Menü",
+    "close": "Kapat",
+    "home": "Ana sayfa",
+    "language": "Dil",
+    "switchTo": "English",
+    "primary": "Ana menü",
+    "breadcrumb": "Sayfa konumu"
+  },
+  "cta": {
+    "appointment": "Randevu Talep Et",
+    "whatsapp": "WhatsApp ile yazın",
+    "call": "Ara",
+    "whatsappShort": "WhatsApp",
+    "whatsappText": "Merhaba, web sitenizden ulaşıyorum. Bir görüşme planlamak istiyorum."
+  },
+  "home": {
+    "eyebrow": "Aile · Yabancılar · Gayrimenkul — İstanbul",
+    "title": "Hukuki süreçlerde açık, özenli ve sakin rehberlik.",
+    "lead": "Av. Aleyna Elif Karaoğlu, İstanbul’da bireylere ve ailelere hukuki danışmanlık ve dava takibi hizmeti verir. Görüşmeler Türkçe ve İngilizce yapılır.",
+    "areasEyebrow": "Çalışma alanları",
+    "areasTitle": "Altı alanda danışmanlık ve dava takibi",
+    "areasAll": "Tüm alanlar",
+    "approachEyebrow": "Çalışma yaklaşımı",
+    "approachTitle": "Süreç dört adımda ilerler; her adımda ne olacağını önceden bilirsiniz.",
+    "aboutEyebrow": "Hakkımda",
+    "aboutQuote": "Hukuki bir sorunla karşılaşan kişinin ilk ihtiyacı, neyle karşı karşıya olduğunu açıkça anlamaktır.",
+    "aboutMore": "Hakkımda daha fazlası",
+    "articlesEyebrow": "Makaleler",
+    "articlesTitle": "Bilgilendirici yazılar",
+    "articlesAll": "Tüm makaleler",
+    "contactEyebrow": "İletişim",
+    "contactTitle": "Durumunuzu kısaca anlatın; uygun bir görüşme zamanı planlayalım."
+  },
+  "approach": [
+    { "title": "İlk görüşme", "text": "Durumunuzu dinler, elinizdeki belgeleri ve beklentilerinizi not ederiz." },
+    { "title": "Değerlendirme", "text": "Mevzuat ve yargı kararları ışığında seçenekleri, riskleri ve olası süreleri açıkça anlatırız." },
+    { "title": "Yol haritası", "text": "Atılacak adımları, gereken belgeleri ve takvimi yazılı olarak paylaşırız." },
+    { "title": "Takip", "text": "Dosyadaki her gelişmeyi size bildirir, sorularınıza makul sürede yanıt veririz." }
+  ],
+  "areas": {
+    "title": "Çalışma Alanları",
+    "description": "Aile, yabancılar, gayrimenkul, ceza, iş ve tazminat hukukunda danışmanlık ve dava takibi. İstanbul.",
+    "intro": "Her alan sayfasında verilen hizmetleri, sürecin nasıl ilerlediğini ve sık sorulan soruları bulabilirsiniz.",
+    "explore": "Alanı inceleyin",
+    "services": "Verilen hizmetler",
+    "process": "Süreç nasıl işler?",
+    "faq": "Sık sorulan sorular",
+    "related": "İlgili makaleler",
+    "step": "Adım",
+    "ctaTitle": "Dosyanız hakkında konuşalım",
+    "ctaText": "İlk görüşmede durumunuzu dinler, olası yolları ve sonraki adımları birlikte değerlendiririz."
+  },
+  "about": {
+    "title": "Hakkımda",
+    "description": "Av. Aleyna Elif Karaoğlu’nun eğitimi, mesleki geçmişi ve çalışma anlayışı.",
+    "education": "Eğitim",
+    "experience": "Mesleki geçmiş",
+    "languages": "Diller",
+    "memberships": "Kayıt",
+    "approach": "Çalışma anlayışı"
+  },
+  "articles": {
+    "title": "Makaleler",
+    "description": "Aile, yabancılar, gayrimenkul, ceza, iş ve tazminat hukuku üzerine genel bilgilendirme yazıları.",
+    "all": "Tümü",
+    "filter": "Kategoriye göre süz",
+    "readingTime": "{minutes} dk okuma",
+    "toc": "İçindekiler",
+    "back": "Tüm makaleler",
+    "disclaimer": "Bu içerik genel bilgilendirme amaçlıdır, hukuki danışmanlık yerine geçmez.",
+    "updated": "Son güncelleme",
+    "languageNote": "",
+    "empty": "Bu kategoride henüz yazı yok."
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "description": "Görüşme, süreç ve çalışma alanlarına ilişkin sık sorulan sorular ve yanıtları.",
+    "general": "Genel"
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Randevu talebi, adres, çalışma saatleri ve iletişim bilgileri.",
+    "lead": "Formu doldurduğunuzda talebiniz doğrudan büroya iletilir; en geç bir iş günü içinde dönüş yapılır.",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "hours": "Çalışma saatleri",
+    "hoursNote": "Görüşmeler randevu ile yapılır.",
+    "mapTitle": "Ofis konumu",
+    "mapConsent": "Harita Google tarafından sunulur ve yüklendiğinde Google çerez kullanabilir.",
+    "mapLoad": "Haritayı göster",
+    "form": {
+      "title": "Randevu talep formu",
+      "name": "Ad Soyad",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "area": "Hukuk alanı",
+      "areaPlaceholder": "Bir alan seçin",
+      "areaOther": "Diğer / emin değilim",
+      "message": "Mesajınız",
+      "messageHint": "Durumunuzu kısaca anlatın. Lütfen bu aşamada hassas belge veya sağlık bilgisi paylaşmayın.",
+      "consent": "<link>KVKK Aydınlatma Metni</link>’ni okudum; talebime dönüş yapılabilmesi için kişisel verilerimin işlenmesine açık rıza veriyorum.",
+      "submit": "Talebi gönder",
+      "sending": "Gönderiliyor…",
+      "success": "Teşekkürler, talebiniz alındı. En geç bir iş günü içinde size dönüş yapılacaktır.",
+      "error": "Talebiniz gönderilemedi. Lütfen tekrar deneyin veya telefonla ulaşın.",
+      "rateLimited": "Çok kısa sürede birden fazla talep gönderildi. Lütfen birkaç dakika sonra tekrar deneyin.",
+      "required": "Bu alan zorunludur.",
+      "invalidEmail": "Geçerli bir e-posta adresi yazın.",
+      "invalidPhone": "Geçerli bir telefon numarası yazın.",
+      "consentRequired": "Devam etmek için açık rıza onayı gereklidir.",
+      "tooShort": "Lütfen birkaç cümleyle açıklayın (en az 20 karakter)."
+    }
+  },
+  "footer": {
+    "nav": "Sayfalar",
+    "legal": "Yasal",
+    "kvkk": "KVKK Aydınlatma Metni",
+    "cookies": "Çerez Politikası",
+    "cookieSettings": "Çerez tercihleri",
+    "notice": "Bu sitedeki içerikler, Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları çerçevesinde yalnızca bilgilendirme amacıyla hazırlanmıştır; reklam niteliği taşımaz.",
+    "registered": "{bar} · Sicil No {number}"
+  },
+  "cookies": {
+    "title": "Çerez tercihleri",
+    "text": "Bu site, çalışması için zorunlu çerezleri kullanır. Harita gibi üçüncü taraf içerikler yalnızca onayınızla yüklenir.",
+    "accept": "Tümünü kabul et",
+    "reject": "Yalnızca zorunlu",
+    "more": "Çerez Politikası"
+  },
+  "notFound": {
+    "title": "Aradığınız sayfa bulunamadı",
+    "text": "Bağlantı değişmiş ya da sayfa kaldırılmış olabilir. Ana sayfadan veya çalışma alanlarından devam edebilirsiniz.",
+    "home": "Ana sayfaya dön"
+  }
+}

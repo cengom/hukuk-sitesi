@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "siteName": "Av. Aleyna Elif Karaoğlu",
+    "homeTitle": "Aleyna Elif Karaoğlu | Lawyer in Istanbul — Family, Immigration and Real Estate Law",
+    "homeDescription": "Attorney Aleyna Elif Karaoğlu, registered with the Istanbul Bar Association, advises and represents individuals in family, immigration, real estate, criminal, employment and compensation matters. Consultations in English and Turkish."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "areas": "Practice Areas",
+    "about": "About",
+    "articles": "Articles",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "appointment": "Request an Appointment",
+    "menu": "Menu",
+    "close": "Close",
+    "home": "Home",
+    "language": "Language",
+    "switchTo": "Türkçe",
+    "primary": "Main menu",
+    "breadcrumb": "Breadcrumb"
+  },
+  "cta": {
+    "appointment": "Request an Appointment",
+    "whatsapp": "Write on WhatsApp",
+    "call": "Call",
+    "whatsappShort": "WhatsApp",
+    "whatsappText": "Hello, I found you through your website and would like to arrange a consultation."
+  },
+  "home": {
+    "eyebrow": "Family · Immigration · Real Estate — Istanbul",
+    "title": "Clear, careful and calm guidance through legal matters.",
+    "lead": "Attorney Aleyna Elif Karaoğlu advises and represents individuals and families in Istanbul. Consultations are held in English and Turkish.",
+    "areasEyebrow": "Practice areas",
+    "areasTitle": "Advice and representation in six areas",
+    "areasAll": "All areas",
+    "approachEyebrow": "How we work",
+    "approachTitle": "The process moves in four steps; you know what happens next at every stage.",
+    "aboutEyebrow": "About",
+    "aboutQuote": "When people face a legal problem, their first need is to understand clearly what they are dealing with.",
+    "aboutMore": "More about me",
+    "articlesEyebrow": "Articles",
+    "articlesTitle": "Informational writing",
+    "articlesAll": "All articles",
+    "contactEyebrow": "Contact",
+    "contactTitle": "Tell us briefly about your situation and we will arrange a suitable time to talk."
+  },
+  "approach": [
+    { "title": "First meeting", "text": "We listen to your situation and note your documents and expectations." },
+    { "title": "Assessment", "text": "We explain the options, risks and likely timelines in light of the law and case law." },
+    { "title": "Roadmap", "text": "We share the steps, the documents needed and the timeline in writing." },
+    { "title": "Follow-up", "text": "We keep you informed of every development and answer your questions promptly." }
+  ],
+  "areas": {
+    "title": "Practice Areas",
+    "description": "Advice and representation in family, immigration, real estate, criminal, employment and compensation law in Istanbul.",
+    "intro": "Each page describes the services offered, how the process works and the questions clients ask most often.",
+    "explore": "Read more",
+    "services": "Services",
+    "process": "How the process works",
+    "faq": "Frequently asked questions",
+    "related": "Related articles",
+    "step": "Step",
+    "ctaTitle": "Let’s talk about your matter",
+    "ctaText": "In a first meeting we listen to your situation and assess the possible routes and next steps together."
+  },
+  "about": {
+    "title": "About",
+    "description": "Education, professional background and approach of Attorney Aleyna Elif Karaoğlu.",
+    "education": "Education",
+    "experience": "Professional background",
+    "languages": "Languages",
+    "memberships": "Registration",
+    "approach": "Approach"
+  },
+  "articles": {
+    "title": "Articles",
+    "description": "General information articles on family, immigration, real estate, criminal, employment and compensation law.",
+    "all": "All",
+    "filter": "Filter by category",
+    "readingTime": "{minutes} min read",
+    "toc": "Contents",
+    "back": "All articles",
+    "disclaimer": "This content is for general information only and does not constitute legal advice.",
+    "updated": "Last updated",
+    "languageNote": "Articles are currently published in Turkish. English versions will follow.",
+    "empty": "No articles in this category yet."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Answers to common questions about consultations, the process and practice areas.",
+    "general": "General"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Appointment requests, address, office hours and contact details.",
+    "lead": "Your request goes directly to the office; you will receive a reply within one business day.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Office hours",
+    "hoursNote": "Meetings are by appointment.",
+    "mapTitle": "Office location",
+    "mapConsent": "The map is provided by Google, which may set cookies once it loads.",
+    "mapLoad": "Show map",
+    "form": {
+      "title": "Appointment request form",
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "area": "Area of law",
+      "areaPlaceholder": "Choose an area",
+      "areaOther": "Other / not sure",
+      "message": "Your message",
+      "messageHint": "Briefly describe your situation. Please do not share sensitive documents or health information at this stage.",
+      "consent": "I have read the <link>Privacy Notice</link> and give explicit consent to the processing of my personal data so that my request can be answered.",
+      "submit": "Send request",
+      "sending": "Sending…",
+      "success": "Thank you, your request has been received. You will hear back within one business day.",
+      "error": "Your request could not be sent. Please try again or call the office.",
+      "rateLimited": "Several requests were sent in a short time. Please try again in a few minutes.",
+      "required": "This field is required.",
+      "invalidEmail": "Enter a valid email address.",
+      "invalidPhone": "Enter a valid phone number.",
+      "consentRequired": "Explicit consent is required to continue.",
+      "tooShort": "Please describe in a few sentences (at least 20 characters)."
+    }
+  },
+  "footer": {
+    "nav": "Pages",
+    "legal": "Legal",
+    "kvkk": "Privacy Notice",
+    "cookies": "Cookie Policy",
+    "cookieSettings": "Cookie settings",
+    "notice": "The content of this website is provided for information only, within the framework of the Turkish Attorneys’ Act and the Union of Turkish Bar Associations’ Professional Rules; it is not advertising.",
+    "registered": "{bar} · Registration No {number}"
+  },
+  "cookies": {
+    "title": "Cookie settings",
+    "text": "This site uses cookies that are strictly necessary for it to work. Third-party content such as the map loads only with your consent.",
+    "accept": "Accept all",
+    "reject": "Necessary only",
+    "more": "Cookie Policy"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The link may have changed or the page may have been removed. You can continue from the home page or the practice areas.",
+    "home": "Back to home"
+  }
+}
