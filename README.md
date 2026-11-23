@@ -137,7 +137,6 @@ Bundan sonra `main` dalına her gönderim canlıya, diğer dallar önizleme (pre
 content/makaleler/        MDX makaleler
 messages/                 Arayüz çevirileri (tr, en)
 public/                   Görseller (portre vb.)
-assets/                   OG görseli için yazı tipleri
 src/
   site.config.ts          Kimlik ve iletişim bilgileri  ← en sık düzenlenen dosya
   content/areas.ts        Çalışma alanları + SSS (TR/EN)

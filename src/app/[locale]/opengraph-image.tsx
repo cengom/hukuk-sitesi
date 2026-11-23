@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 
@@ -11,10 +9,7 @@ export const contentType = "image/png";
 export default async function OG({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = (await params) as { locale: Locale };
   const t = await getTranslations({ locale, namespace: "home" });
-  const [serif, sans] = await Promise.all([
-    readFile(path.join(process.cwd(), "assets/Fraunces-300.ttf")),
-    readFile(path.join(process.cwd(), "assets/Inter-500.ttf")),
-  ]);
+  const [serif, sans] = await Promise.all([loadFont("Fraunces", 300), loadFont("Inter", 500)]);
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#faf7f0", padding: 80, fontFamily: "Inter" }}>
@@ -35,4 +30,14 @@ export default async function OG({ params }: { params: Promise<{ locale: string 
 
 export function generateStaticParams() {
   return [{ locale: "tr" }, { locale: "en" }];
+}
+
+// Google Fonts'tan TTF çeker (derleme sırasında bir kez çalışır; görseller statik üretilir).
+async function loadFont(family: string, weight: number): Promise<ArrayBuffer> {
+  const css = await fetch(`https://fonts.googleapis.com/css2?family=${family}:wght@${weight}`, {
+    headers: { "User-Agent": "Mozilla/4.0" },
+  }).then((r) => r.text());
+  const url = css.match(/src: url\((.+?)\) format\('truetype'\)/)?.[1];
+  if (!url) throw new Error(`Font bulunamadı: ${family}`);
+  return fetch(url).then((r) => r.arrayBuffer());
 }
